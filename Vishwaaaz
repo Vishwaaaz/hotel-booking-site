@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hotel Management System</h1>
+  </header>
+
+  <main>
+    <!-- Login Section -->
+    <section id="login-section">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Username:</label>
+        <input type="text" id="username" required>
+        <label>Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- Booking Form (for customer) -->
+    <section id="booking-section" style="display:none;">
+      <h2>Book a Room</h2>
+      <form id="roomForm">
+        <label>Name:</label>
+        <input type="text" id="custName" required>
+        <label>Room Type:</label>
+        <select id="roomType" required>
+          <option value="Single">Single – ₹4 k/night</option>
+          <option value="Double">Double – ₹6 k/night</option>
+          <option value="Suite">Suite – ₹10 k/night</option>
+        </select>
+        <label>Nights:</label>
+        <input type="number" id="nights" min="1" value="1" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment-section" style="display:none;">
+      <h2>Payment</h2>
+      <form id="paymentForm">
+        <label>Cardholder Name:</label><input type="text" id="cardName" required>
+        <label>Card Number:</label><input type="text" id="cardNumber" required>
+        <label>Expiry:</label><input type="text" id="expDate" placeholder="MM/YY" required>
+        <label>CVC:</label><input type="text" id="cvc" required>
+        <button type="submit">Pay Now</button>
+      </form>
+    </section>
+
+    <!-- Admin Dashboard (for admin) -->
+    <section id="admin-section" style="display:none;">
+      <h2>Admin Dashboard</h2>
+      <button id="viewBookings">View All Bookings</button>
+      <ul id="bookingList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hotel Management</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
